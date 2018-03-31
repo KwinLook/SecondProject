@@ -6,13 +6,12 @@
 
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
-  Text,
   View
 } from 'react-native';
-import Header from './src/Header';
-import Input from './src/Input';
+import Header from './src/header';
+import Input from './src/input';
+import List from './src/list';
 
 export default class App extends Component {
   render() {
@@ -20,6 +19,7 @@ export default class App extends Component {
       <View style={styles.container}>
         <Header />
         <Input />
+        <List />
       </View>
     );
   }
