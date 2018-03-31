@@ -10,16 +10,16 @@ export default class List extends React.Component {
     this.state = {list:['Click to Remove' , 'แปรงฟัน' , 'อาบน้ำ'] }
 
   }
-  render() { 
+  render() {
     return (
-      <View style={{backgroundColor:'whitesmoke',padding:15,}}>
-            {this.state.lst.map((text,i)=>{
-              return(
-                <View key={i}>
+      <View>
+            {this.state.list.map((text,i)=>
+              (
+                <View key={i} style={{backgroundColor:'whitesmoke',padding:15,marginBottom: 5}}>
                     <Text>{text}</Text>
                 </View>
               )
-            })}
+            )}
       </View>
     )
   }
