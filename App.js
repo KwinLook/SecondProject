@@ -50,10 +50,9 @@ export default class App extends React.Component {
     tmpList = tmpList.filter((tmp,i)=>i!=index)
     this.setState({list:tmpList})
 }
-addTodo(text) {
-  let tmpList = [...this.state.list];
-  tmpList.unshift(text);
-  this.setState({list:tmpList});
+  addTodo(text) {
+    // let tmpList = [...this.state.list];
+    this.setState({list:[text,...this.state.list]});
 }
   render() {
     return (
