@@ -1,23 +1,33 @@
-import React from 'react';
-import { StackNavigator } from 'react-navigation';
-import HomeScreen from './screen/HomeScreen';
-import DetailScreen from './screen/DetailScreen';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
 
-const RootStack = StackNavigator({
-  Home: {
-    screen: HomeScreen
-  },
-  Detail: {
-    screen: DetailScreen
-  },
-},
-  {
-    initialRouteName: 'Home',
-  }
-);
+import React, { Component } from 'react';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
+import Header from './src/Header';
+import Input from './src/Input';
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
-    return <RootStack />
+    return (
+      <View style={styles.container}>
+        <Header />
+        <Input />
+      </View>
+    );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F5FCFF',
+  }
+});
