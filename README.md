@@ -218,3 +218,100 @@ There are a few steps you may want to take to troubleshoot these kinds of errors
 If you're not able to scan the QR code, make sure your phone's camera is focusing correctly, and also make sure that the contrast on the two colors in your terminal is high enough. For example, WebStorm's default themes may [not have enough contrast](https://github.com/react-community/create-react-native-app/issues/49) for terminal QR codes to be scannable with the system barcode scanners that the Expo app uses.
 
 If this causes problems for you, you may want to try changing your terminal's color theme to have more contrast, or running Create React Native App from a different terminal. You can also manually enter the URL printed by the packager script in the Expo app's search bar to load it manually.
+
+
+////////////////////////////////////ลงเพิ่ม/////////////////////////////////////////////////
+
+ใช้ mobx
+intstall mobx
+npm i mobx mobx-react --save
+
+install babel-plugin
+npm install babel-plugin-transform-decorators-legacy --save-dev
+
+
+
+
+
+https://notepad.pw/mfu_rn
+
+เตรียม Environment
+1. Android Studio + APIs 25
+2. Genemotion + Image APIs 25 (Samsung GS7)
+3. npm install -g react-native-cli
+4. Change Region --> English
+5. https://facebook.github.io/react-native/docs/getting-started.html  
+
+https://facebook.github.io/react-native/docs/getting-started.html
+
+
+=== Fix Could not expand Zip ... ===
+https://werapun.com/react-native-build-problem-android-5e868ae26004?gi=2b19afaf54e6
+
+
+
+JSON-Server data on firebase:https://
+mfu-eport.firebaseio.com/cooking.json
+
+
+VNC Server: 10.1.110.103
+pass: abc1234
+
+
+https://notepad.pw/mfu_rn
+WiFi:
+SSID: MFUreact
+pass: mfureact2018
+** iPhone ต้อง connect ซัก 2 รอบ
+
+https://es6console.com
+
+10.1.110.126
+pass: react1234
+
+1. ติดตั้ง  node.js 64bit
+https://nodejs.org/en/download/
+2. ติดตั้ง react-native
+npm install -g react-native-cli
+npm install -g exp
+npm install -g create-react-native-app      
+
+
+
+3. ย้อน version ของ npm
+npm i -g npm@4
+
+4. ทดลองสร้าง project ตาม getting start
+https://facebook.github.io/react-native/docs/getting-started.html
+
+npm install -g create-react-native-app
+create-react-native-app MyApp
+cd MyApp
+npm start
+
+เปิด App Expo บนมือถือมาสแกน
+
+5. Install VSCode
+6. เปิดไฟล์ App.js มาแก้ไข
+
+
+
+
+http://nextflow.in.th/2017/install-react-native-for-window-for-android-app-dev/
+
+
+
+การเตรียม Environment เบื้องต้น
+ในวันอบรมแรก เราใช้แค่
+1. Node.js
+2. react native (ตามหัวข้อที่ 3 ในบทความ)
+3. โปรแกรม Expo (ติดตั้งบนมือถือมาด้วยเลย)
+** ใครจะลงให้ครบตามบทความก็ได้
+
+ส่วนของ Android สามารถลงตามบทความได้เลย แต่ถ้ายังไม่ได้ยังพอมีเวลา (ปล. การติดตั้งจะใช้เวลาค่อนข้างนาน)
+
+ปล. ของใครที่ลงบน Windows แล้วติดปัญหาแจ้งเตือนตัว Watchman ให้ติดตั้งโปรแกรม watchman แยกต่างหากแล้วเซ็ตตัวแปร Environment ด้วย จาก link นี้
+https://facebook.github.io/watchman/docs/install.html
+
+บทความสอนวิธีติดตั้ง Environment ของ React Native
+http://nextflow.in.th/2017/install-react-native-for-window-for-android-app-dev/
