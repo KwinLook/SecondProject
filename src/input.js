@@ -12,7 +12,10 @@ export default class Input extends React.Component {
     this.onSubmitEditing = this.onSubmitEditing.bind(this);
   }
   onSubmitEditing(){
-    this.setState({text:''});
+    this.setState({ text: '' });
+    this.props.todoStore.list = [this.state.text,...this.props.todoStore.list];
+
+
   }
   render() {
     return ( <

@@ -7,12 +7,12 @@ export default class List extends React.Component {
         super();
         this.state = {list:['Click to Remove','แปรงฟัน','อาบน้ำ'],}
         this.removeTodo = this.removeTodo.bind(this);
-        this
     }
     removeTodo(index){
         let tmpList = [...this.state.list];
         tmpList = tmpList.filter((tmp,i)=>i!=index)
-        this.setState({list:tmpList})
+        // this.setState({list:tmpList})
+        this.props.todoStore.list = tmpList;
     }
     render(){
         return(
