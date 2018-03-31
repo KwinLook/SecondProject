@@ -1,65 +1,26 @@
-// /**
-//  * Sample React Native App
-//  * https://github.com/facebook/react-native
-//  * @flow
-//  */
-//
-// import React, { Component } from 'react';
-// import {
-//   StyleSheet,
-//   View
-// } from 'react-native';
-// import Header from './src/header';
-// import Input from './src/input';
-// import List from './src/list';
-//
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <Header />
-//         <Input />
-//         <List />
-//       </View>
-//     );
-//   }
-// }
-//
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#F5FCFF',
-//   }
-// });
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
 
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import {
+  StyleSheet,
+  View
+} from 'react-native';
 import Header from './src/header';
 import Input from './src/input';
-import List from './src/list'
+import List from './src/list';
+import todoStore from './src/store/todoStore'
 
-export default class App extends React.Component {
-  constructor(){
-    super();
-    this.state ={list:['Click to Remove','แปรงฟัน','อาบน้ำ'],}
-    this.removeTodo = this.removeTodo.bind(this);
-    this.addTodo = this.addTodo.bind(this);
-  }
-  removeTodo(index){
-    let tmpList = [...this.state.list];
-    tmpList = tmpList.filter((tmp,i)=>i!=index)
-    this.setState({list:tmpList})
-}
-  addTodo(text) {
-    // let tmpList = [...this.state.list];
-    this.setState({list:[text,...this.state.list]});
-}
+export default class App extends Component {
   render() {
     return (
-      <View  style={styles.container} >
-      <Header  />
-      <Input onSubmitEditing={this.addTodo} />
-      <List list={this.state.list} onPressItem={this.removeTodo} />
+      <View style={styles.container}>
+        <Header />
+        <Input todoStore={todoStore}/>
+        <List  todoStore={todoStore}/>
       </View>
     );
   }
@@ -68,6 +29,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-  },
+    backgroundColor: '#F5FCFF',
+  }
 });
