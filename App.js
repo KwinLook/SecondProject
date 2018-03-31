@@ -52,7 +52,7 @@ export default class App extends React.Component {
 }
 addTodo(text) {
   let tmpList = [...this.state.list];
-  tmpList.push(text);
+  tmpList.unshift(text);
   this.setState({list:tmpList});
 }
   render() {
