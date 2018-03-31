@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 import {observer} from 'mobx-react/native';
 
 // @inject('todoStore')
@@ -9,7 +9,7 @@ export default class Header extends React.Component{
   render(){
     return (
       <View style={styles.header}>
-        <Text style={styles.text}>Header</Text>
+        <Text style={styles.text}>K'winLook</Text>
         <Button style={styles.button}
           onPress={()=>this.props.todoStore.addTodo()}
           title="Add"
@@ -23,7 +23,7 @@ export default class Header extends React.Component{
 const styles = StyleSheet.create({
   header:{
     padding:25,
-    backgroundColor:'skyblue',
+    backgroundColor:'#2aa3ef',
     flexDirection:'row'
   },
   text:{

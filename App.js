@@ -5,10 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  View
-} from 'react-native';
+import { StyleSheet, Text , View } from 'react-native';
 import Header from './src/header';
 import Input from './src/input';
 import List from './src/list';
