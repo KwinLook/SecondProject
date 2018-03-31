@@ -315,3 +315,6 @@ https://facebook.github.io/watchman/docs/install.html
 
 บทความสอนวิธีติดตั้ง Environment ของ React Native
 http://nextflow.in.th/2017/install-react-native-for-window-for-android-app-dev/
+
+
+      // returnKeyType =ios

@@ -14,11 +14,11 @@ import Input from './src/input';
 import List from './src/list';
 import todoStore from './src/store/todoStore'
 
-export default class App extends Component {
+export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header />
+        <Header todoStore={todoStore}/>
         <Input todoStore={todoStore}/>
         <List  todoStore={todoStore}/>
       </View>
@@ -28,7 +28,6 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF',
-  }
+    flex: 1
+  },
 });

@@ -5,22 +5,21 @@ import { observer } from 'mobx-react/native'
 export default class List extends React.Component {
     constructor(){
         super();
-        this.state = {list:['Click to Remove','แปรงฟัน','อาบน้ำ'],}
         this.removeTodo = this.removeTodo.bind(this);
     }
     removeTodo(index){
-        let tmpList = [...this.state.list];
-        tmpList = tmpList.filter((tmp,i)=>i!=index)
-        // this.setState({list:tmpList})
+        let tmpList = [...this.props.todoStore.list];
+        tmpList = tmpList.filter((tmp,i)=>i!=index);
         this.props.todoStore.list = tmpList;
     }
     render(){
         return(
-            <View>
+            <View >
                 {this.props.todoStore.list.map((text,i)=>
                     (
                     <TouchableOpacity key={i} onPress={()=>this.removeTodo(i)}
-                    style={{backgroundColor:'whitesmoke',padding:15,marginBottom:5}} >
+                    style={{backgroundColor:'whitesmoke'
+                    ,padding: 15,marginBottom:5}}>
                         <Text>{text}</Text>
                     </TouchableOpacity>
                     )
