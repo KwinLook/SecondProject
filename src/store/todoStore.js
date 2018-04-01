@@ -17,8 +17,3 @@ export default class TodoStore {
         this.list =  JSON.parse(await AsyncStorage.getItem("todoList")) || [];
   }
 }
-<<<<<<< HEAD
-
-export default todoStore
-=======
->>>>>>> Dev(K'win)

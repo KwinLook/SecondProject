@@ -12,12 +12,7 @@ import {
 import Header from './src/header';
 import Input from './src/input';
 import List from './src/list';
-<<<<<<< HEAD
-import todoStore from './src/store/todoStore'
-import store from '/src/store/store'
-=======
 import store from './src/store/store'
->>>>>>> Dev(K'win)
 import {Provider} from 'mobx-react/native'
 
 export default class App extends React.Component {
