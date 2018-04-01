@@ -26,9 +26,8 @@ export default class Input extends React.Component {
     render(){
         return(
     <Animatable.View ref="view"
-      style={[!this.state.error ?
-        {borderColor:'gray',borderWidth:1}
-        :{borderColor:'red',borderWidth:1}]}>
+      style={[{borderColor:'gray',borderWidth:1}
+        ,this.state.error && {borderColor:'red',borderWidth:1}]}>
       <TextInput style = { styles.input }
       value = { this.props.todoStore.text }
       placeholder = 'พิมพ์สิ่งที่ต้องการทำ จากนั้น กด Enter'
