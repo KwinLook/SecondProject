@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 import { observer , inject } from 'mobx-react/native';
 import * as Animatable from 'react-native-animatable';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 @inject('todoStore')
 @observer
@@ -13,9 +14,10 @@ export default class Header extends React.Component{
         <Text style={styles.text}>K'winLook</Text>
         <Button style={styles.button}
           onPress={()=>this.props.todoStore.addTodo()}
-          title="Add"
+          title="+Add"
           color="#841584"
           />
+      <Icon name="plus"/>
       </Animatable.View>
     );
   }
