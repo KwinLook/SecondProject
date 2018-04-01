@@ -12,7 +12,7 @@ import {
 import Header from './src/header';
 import Input from './src/input';
 import List from './src/list';
-import store from '/src/store/store'
+import store from './src/store/store'
 import {Provider} from 'mobx-react/native'
 
 export default class App extends React.Component {

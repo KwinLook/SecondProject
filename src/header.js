@@ -1,8 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
-import {observer} from 'mobx-react/native';
-
-// @inject('todoStore')
+import { observer , inject } from 'mobx-react/native'
+@inject('todoStore')
 @observer
 export default class Header extends React.Component{
 

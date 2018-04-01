@@ -6,14 +6,14 @@ import { AsynStorage } from 'react-native'
 export default class TodoStore {
   @observable list = ['Click to Remove', 'แปรงฟัน', 'อาบน้ำ'];
   @observable text = '';
-  addTodo() {
+  async addTodo() {
     if (this.text !='' ) {
       this.list = [this.text, ...this.list];
       this.text = '';
-      AsynStorage.setItem(("todoList",JSON.stringify(this.list)))
+      await AsyncStorage.setItem("todoList",JSON.stringify(this.list))
     }
   }
   async getTodoList(){
-        this.list =  JSON.parse(await AsynStorage.getItem("todoList")) || [];
+        this.list =  JSON.parse(await AsyncStorage.getItem("todoList")) || [];
   }
 }

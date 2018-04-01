@@ -1,6 +1,7 @@
 import React from 'react';
 import {View,Text,StyleSheet,TouchableOpacity} from 'react-native';
-import { observer } from 'mobx-react/native'
+import { observer , inject } from 'mobx-react/native'
+@inject('todoStore')
 @observer
 export default class List extends React.Component {
     constructor(){
