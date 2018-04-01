@@ -1,6 +1,7 @@
 import React from 'react';
 import {TextInput,StyleSheet} from 'react-native';
-import {observer} from 'mobx-react/native'
+import { observer , inject } from 'mobx-react/native'
+@inject('todoStore')
 @observer
 export default class Input extends React.Component {
     constructor(){
@@ -19,7 +20,7 @@ export default class Input extends React.Component {
       <TextInput style = { styles.input }
       value = { this.props.todoStore.text }
       placeholder = 'พิมพ์สิ่งที่ต้องการทำ จากนั้น กด Enter'
-      onChangeText = { (text) => this.props.todoStore.text = text } 
+      onChangeText = { (text) => this.props.todoStore.text = text }
       returnKeyType={ 'done' }
       returnKeyLabel={ 'done' }
       onSubmitEditing={this.onSubmitEditing}
