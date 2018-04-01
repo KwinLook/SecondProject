@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextInput,StyleSheet} from 'react-native';
+import {TextInput,StyleSheet,Vibration} from 'react-native';
 import { observer , inject } from 'mobx-react/native'
 import * as Animatable from 'react-native-animatable';
 
@@ -21,6 +21,7 @@ export default class Input extends React.Component {
         }else{
           this.setState({error: true})
           this.refs.view.bounce(800);
+          Vibration.vibrate();
         }
     }
     render(){
