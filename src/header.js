@@ -1,20 +1,22 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
-import { observer , inject } from 'mobx-react/native'
+import { observer , inject } from 'mobx-react/native';
+import * as Animatable from 'react-native-animatable';
+
 @inject('todoStore')
 @observer
 export default class Header extends React.Component{
 
   render(){
     return (
-      <View style={styles.header}>
+      <Animatable.View style={styles.header}  animation="bounce" delay={500}>
         <Text style={styles.text}>K'winLook</Text>
         <Button style={styles.button}
           onPress={()=>this.props.todoStore.addTodo()}
           title="Add"
           color="#841584"
           />
-      </View>
+      </Animatable.View>
     );
   }
 }
