@@ -7,6 +7,9 @@ export default class List extends React.Component {
         super();
         this.removeTodo = this.removeTodo.bind(this);
     }
+    componentDidMount(){
+      this.props.todoStore.getTodoList();
+    }
     removeTodo(index){
         let tmpList = [...this.props.todoStore.list];
         tmpList = tmpList.filter((tmp,i)=>i!=index);

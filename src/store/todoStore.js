@@ -1,17 +1,19 @@
 import {
   observable
 } from 'mobx'
+import { AsynStorage } from 'react-native'
 
-class TodoStore {
+export default class TodoStore {
   @observable list = ['Click to Remove', 'แปรงฟัน', 'อาบน้ำ'];
   @observable text = '';
   addTodo() {
     if (this.text !='' ) {
       this.list = [this.text, ...this.list];
       this.text = '';
+      AsynStorage.setItem(("todoList",JSON.stringify(this.list)))
     }
   }
+  async getTodoList(){
+        this.list =  JSON.parse(await AsynStorage.getItem("todoList")) || [];
+  }
 }
-
-const todoStore = new TodoStore()
-export default todoStore
