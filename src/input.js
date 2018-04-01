@@ -31,7 +31,10 @@ export default class Input extends React.Component {
       <TextInput style = { styles.input }
       value = { this.props.todoStore.text }
       placeholder = 'พิมพ์สิ่งที่ต้องการทำ จากนั้น กด Enter'
-      onChangeText = { (text) => this.props.todoStore.text = text }
+      onChangeText = { (text) => {
+                          this.props.todoStore.text = text
+                          this.setState({error:false})
+      } }
       returnKeyType={ 'done' }
       returnKeyLabel={ 'done' }
       onSubmitEditing={this.onSubmitEditing}
