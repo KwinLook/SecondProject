@@ -13,15 +13,19 @@ import Header from './src/header';
 import Input from './src/input';
 import List from './src/list';
 import todoStore from './src/store/todoStore'
+import store from '/src/store/store'
+import {Provider} from 'mobx-react/native'
 
 export default class App extends React.Component {
   render() {
     return (
+    <Provider {...store}>
       <View style={styles.container}>
-        <Header todoStore={todoStore}/>
-        <Input todoStore={todoStore}/>
-        <List  todoStore={todoStore}/>
+        <Header />
+        <Input />
+        <List  />
       </View>
+     </Provider>
     );
   }
 }
